@@ -8,3 +8,10 @@ describe('API Tests', () => {
     expect(res.body.message).toBe('Task API Running');
   });
 });
+describe('API Tests', () => {
+  test('post/ responds with running message', async () => {
+    const res = await request(app).get('/');
+    expect(res.status).toBe(200);
+    expect(res.body.message).toBe('Task API Running');
+  });
+});
